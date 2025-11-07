@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camaradas ☭ - Resistor Color Code Calculator</title>
+    <meta name="description" content="Free online resistor calculator. Convert resistance values to color bands and vice versa. Supports 4-band and 5-band resistors with real-time visualization.">
+    <meta name="keywords" content="resistor calculator, color code calculator, resistor color code, ohm calculator, resistance calculator, electronic components">
+    <meta name="author" content="Camaradas">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Camaradas ☭ - Resistor Color Code Calculator">
+    <meta property="og:description" content="Free online resistor calculator. Convert resistance values to color bands and vice versa.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☭</text></svg>">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Camaradas ☭</h1>
+        <p class="subtitle">Resistor Color Code Calculator</p>
+
+        <section class="mode-toggle-section">
+            <h2>Mode</h2>
+            <div class="mode-toggle">
+                <button data-mode="4" class="active">4-Band</button>
+                <button data-mode="5">5-Band</button>
+            </div>
+        </section>
+
+        <section class="resistor-display">
+            <div class="resistor-container">
+                <div class="resistor-leads left"></div>
+                <div class="resistor-body">
+                    <div class="resistor-bands" id="resistor-bands"></div>
+                </div>
+                <div class="resistor-leads right"></div>
+            </div>
+        </section>
+
+        <section class="controls-wrapper">
+            <div class="controls" id="controls"></div>
+            <div class="value-display">
+                <div class="value-input-wrapper">
+                    <div class="composite-input">
+                        <input type="text" id="resistance-input" placeholder="e.g., 4.7k, 100, 1M">
+                        <span class="input-suffix">Ω</span>
+                        <span class="input-suffix tolerance" id="tolerance-display">±5%</span>
+                    </div>
+                    <button id="convert-btn">Convert</button>
+                </div>
+                <div class="warning" id="warning"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
